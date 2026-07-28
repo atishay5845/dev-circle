@@ -10,14 +10,14 @@ const Navbar = () => {
         <a className="btn btn-ghost text-xl">👨‍💻DevCircle</a>
       </div>
       {user && (
-        <div className="flex-none gap-2">
-          <div className="form-control">Welcome, {user.firstName}</div>
-          <div className="dropdown dropdown-end mx-5 flex">
+        <div className="flex items-center gap-3 px-4">
+          <span className="font-medium text-sm">Welcome, {user.firstName}</span>
+          <div className="dropdown dropdown-end">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
               <div className="w-10 rounded-full">
                 <img
                   alt="Tailwind CSS Navbar component"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp" />
+                  src={user.photoUrl || "https://cdn-icons-png.flaticon.com/512/149/149071.png"} />
               </div>
             </div>
             <ul
